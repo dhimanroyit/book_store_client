@@ -1,0 +1,21 @@
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  margin-left: auto;
+}
+.nav__item {
+  padding: 10px 20px;
+}
+.nav__item:not(:last-child) {
+  margin-right: 5px;
+}
+.nav__item:last-child {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  color: var(--btn-txt-color);
+}
+
