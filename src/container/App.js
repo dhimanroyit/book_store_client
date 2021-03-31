@@ -1,15 +1,18 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Header from '../layout/Header/Header';
+import Home from '../pages/Home/Home';
 import './App.css';
 
 function App() {
   return (
     <Router>
+        <Header />
       <Switch>
         <Route exact path="/">
-          <h1>home page</h1>
+          <Home />
         </Route>
-        <Route path="/order">
+        <Route path="/orders">
           <h1>Order page</h1>
         </Route>
         <Route path="/admin">
