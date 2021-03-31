@@ -1,0 +1,29 @@
+.search {
+  width: 50%;
+}
+.search__form {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.search__inputGroup {
+background-color: var(--light-color);
+display: flex;
+align-items: center;
+padding: 15px;
+width: 100%;
+}
+.search__icon {
+  margin-right: 10px;
+}
+.search__input {
+  background-color: transparent;
+  width: 100%;
+
+}
+.search__btn {
+  background-color: var(--secondary-color);
+  color: var(--btn-txt-color);
+  padding: 15px 40px;
+  cursor: pointer;
+}
