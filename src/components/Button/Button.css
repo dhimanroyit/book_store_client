@@ -2,4 +2,5 @@
   padding: 10px 15px;
   background-color: var(--secondary-color);
   color: var(--btn-txt-color);
+  border-radius: 5px;
 }
