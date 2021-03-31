@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductList from '../../components/ProductList/ProductList';
 import Search from '../../components/Search/Search';
 import './Home.css';
 
@@ -8,6 +9,7 @@ function Home() {
       <div className="searchBox">
         <Search />
       </div>
+      <ProductList />
 
     </section>
   )
