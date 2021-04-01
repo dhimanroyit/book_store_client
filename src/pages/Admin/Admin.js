@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPlus, faEdit, faThLarge} from '@fortawesome/free-solid-svg-icons';
 import './Admin.css';
 import AddBook from '../AddBook/AddBook';
+import ManageBooks from '../ManageBooks/ManageBooks';
 
 function Admin() {
   const {url, path} = useRouteMatch();
@@ -25,7 +26,7 @@ function Admin() {
         </header>
         <section className="admin__pageContent">
           <Route path={`${path}/managebooks`}>
-            <h1>manage books</h1>
+            <ManageBooks />
           </Route>
           <Route path={`${path}/addbook`} >
             <AddBook />            
