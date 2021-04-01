@@ -19,11 +19,17 @@ width: 100%;
 .search__input {
   background-color: transparent;
   width: 100%;
-
 }
 .search__btn {
   background-color: var(--secondary-color);
   color: var(--btn-txt-color);
   padding: 15px 40px;
   cursor: pointer;
+}
+.search__btn,
+.search__input,
+.search__btn:focus
+.search__input:focus {
+  border: none;
+  outline: none;
 }
