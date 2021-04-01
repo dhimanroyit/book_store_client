@@ -3,4 +3,9 @@
   background-color: var(--secondary-color);
   color: var(--btn-txt-color);
   border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.Button:focus {
+  outline: none;
 }
