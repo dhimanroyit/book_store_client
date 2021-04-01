@@ -1,13 +1,17 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 import Header from '../layout/Header/Header';
+import Admin from '../pages/Admin/Admin';
 import Home from '../pages/Home/Home';
 import './App.css';
+import { useRouteMatch } from 'react-router-dom';
 
 function App() {
+  const matchAdminRoute = useRouteMatch("/admin");
+  
   return (
-    <Router>
-        <Header />
+    <>
+      { !matchAdminRoute && <Header />}
       <Switch>
         <Route exact path="/">
           <Home />
@@ -16,7 +20,7 @@ function App() {
           <h1>Order page</h1>
         </Route>
         <Route path="/admin">
-          <h1>admin page</h1>
+          <Admin />
         </Route>
         <Route path="/deals">
           <h1>deals page</h1>
@@ -28,7 +32,7 @@ function App() {
           <h1>signup page</h1>
         </Route>
       </Switch>
-    </Router>
+    </>
   );
 }
 

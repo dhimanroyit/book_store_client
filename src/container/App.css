@@ -1,6 +1,8 @@
 :root {
   --primary-color: #3C3C3C ;
   --secondary-color: #FF5757;
+  --secondary-dark-color: #f03b3b;
+  --admin-bg: #f8dbdb;
   --title-color: #000000;
   --btn-txt-color: #ffffff;
   --light-color: #F1F1F1;
@@ -22,13 +24,6 @@ body {
 a {
   text-decoration: none;
   color: var(--primary-color);
-}
-input,
-input:focus,
-button,
-button:focus {
-  border: none;
-  outline: none;
 }
 img {
   display: block;
