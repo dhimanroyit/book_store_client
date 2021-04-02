@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import firebaseConfig from './firebase.config';
 
 const firebaseInit = () => {
-  firebase.initializeApp(firebaseConfig);
+  return !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
 }
 
 export default firebaseInit;
