@@ -4,11 +4,18 @@ export const signInContext = createContext();
 
 
 
-const SignInProvider = ({children}) => {
-  const [signIn, setSignIn] = useState(false);
+const SignInContextProvider = ({children}) => {
+  const [signInUser, setSignInUser] = useState(
+    {
+      signIn: false,
+      name: '',
+      email: '',
+      photo: '',
+    }
+  );
   const signInData = {
-    signIn,
-    setSignIn
+    signInUser,
+    setSignInUser
   }
   return (
     <signInContext.Provider value={signInData}>
@@ -17,5 +24,5 @@ const SignInProvider = ({children}) => {
   )
 }
 
-export default SignInProvider;
+export default SignInContextProvider;
 
