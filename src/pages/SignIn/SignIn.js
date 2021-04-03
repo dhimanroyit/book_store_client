@@ -1,14 +1,40 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import firebase from 'firebase/app';
 import { useForm } from 'react-hook-form';
-import {Link} from 'react-router-dom';
+import {Link, useHistory, useLocation} from 'react-router-dom';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { signInContext } from '../../context/SignInContext';
 import ButtonAuth from '../../components/ButtonAuth/ButtonAuth';
 import './SignIn.css';
 
 function SignIn() {
+  const {setSignInUser} = useContext(signInContext);
   const {register, handleSubmit, errors} = useForm();
+  const history = useHistory();
+  const location = useLocation();
+  let { from } = location.state || { from: { pathname: "/" } };
+
   const onSubmit = (data) => {
     console.log(data);
+  }
+
+  const googleAuthHandler = () => {
+    const googleProvider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth()
+      .signInWithPopup(googleProvider)
+      .then((result) => {
+        const {displayName, email,photoURL} = result.user;
+        const signInUserData = {
+          signIn: true,
+          name: displayName,
+          email,
+          photo: photoURL,
+        };
+        setSignInUser(signInUserData);
+        history.replace(from);
+      }).catch((error) => {
+        console.log(error);
+      });
   }
   return (
     <div className="signInPage">
@@ -57,7 +83,7 @@ function SignIn() {
             </div>
             <div className="loginAuth">
               <div className="loginAuth__divider">Or</div>
-              <ButtonAuth clicked={() => console.log('auth')} icon={faGoogle}>Continue with Google</ButtonAuth>
+              <ButtonAuth clicked={googleAuthHandler} icon={faGoogle}>Continue with Google</ButtonAuth>
             </div>
     </div>
   )

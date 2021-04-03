@@ -1,19 +1,18 @@
 import React from 'react'
 import Button from '../../Button/Button'
-import img from '../../../assets/img/product.png';
 import './ProductItem.css';
 
-function ProductItem() {
+function ProductItem({_id, name, author, price, photo, productBuyHandler}) {
   return (
     <section className="product">
       <div className="product__media">
-        <img src={img} alt="" className="product__img"/>
+        <img src={photo} alt="" className="product__img"/>
       </div>
-      <h2 className="product__title">JavaScript Everywhere</h2>
-      <p className="product__txt">Adam D. Scottark Lutz</p>
+      <h2 className="product__title">{name}</h2>
+      <p className="product__txt">{author}</p>
       <div className="product__buyOption">
-        <p className="product__price">$234</p>
-        <Button>Buy Now</Button>
+        <p className="product__price">${price}</p>
+        <Button click={() => productBuyHandler(_id)}>Buy Now</Button>
       </div>
     </section>
   )

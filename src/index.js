@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './container/App';
 import {BrowserRouter} from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://protected-bastion-75126.herokuapp.com';
 
 ReactDOM.render(
   <React.StrictMode>

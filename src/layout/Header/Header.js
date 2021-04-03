@@ -14,7 +14,7 @@ function Header() {
         <Link to="/orders" className="nav__item">Orders</Link>
         <Link to="/admin" className="nav__item">Admin</Link>
         <Link to="/deals" className="nav__item">Deals</Link>
-        <Link to="/checkout" className="nav__item">Checkout</Link>
+        {signInUser.signIn && <Link to="/checkout" className="nav__item">Checkout</Link>}
         {signInUser.signIn ? <Avatar img={signInUser.photo} /> : <Link to="/signin" className="nav__item">Login</Link>}
       </nav>
     </header>

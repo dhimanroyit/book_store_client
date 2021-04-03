@@ -3,17 +3,19 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import './ManageProductItem.css';
 
-function ManageProductItem() {
+function ManageProductItem({_id, name, author, price, deleteProduct}) {
+
+ 
   return (
     <div className="manageProductItem">
-      <p>Javascript Everywhere</p>
-      <p>Dhiman roy</p>
-      <p>$283</p>
+      <p>{name}</p>
+      <p>{author}</p>
+      <p>${price}</p>
       <div>
         <button className="btnEdit">
           <FontAwesomeIcon icon={faEdit} />
         </button>
-        <button className="btnDelete">
+        <button onClick={() => deleteProduct(_id)}  className="btnDelete">
           <FontAwesomeIcon icon={faTrashAlt} />
         </button>
       </div>

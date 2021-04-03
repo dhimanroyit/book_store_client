@@ -10,13 +10,13 @@ function AddProduct() {
 
   const onSubmit = (data) => {
     const {author, name, price} = data;
-    const bookData = {
+    const productData = {
       name,
       author,
       price,
       photo: imageURL,
     }
-    axios.post('http://localhost:5000/book', bookData)
+    axios.post('/product', productData)
       .then(res => {
         console.log(res);
       })
