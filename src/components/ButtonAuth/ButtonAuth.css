@@ -7,12 +7,17 @@
   border-radius: 30px;
   margin-bottom: 15px;
   position: relative;
+  cursor: pointer;
+}
+.button__auth:focus {
+  outline: none;
 }
 
 .button__authIcon {
   font-size: 30px;
   position: absolute;
-  left: 8px;
+  left: 4px;
   top: 50%;
   transform: translateY(-50%);
+  line-height: 1;
 }
