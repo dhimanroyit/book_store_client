@@ -1,0 +1,48 @@
+.addProduct {
+
+}
+.addProduct__form {
+  
+}
+.addProduct__inputGroup {
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 30px;
+}
+
+.addProduct__input {
+  display: block;
+  border: 1px solid #c9c9c9;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.addProduct__input:focus {
+  outline: none;
+  border-color: salmon;
+}
+.addProduct__inputFile {
+  width: 100%;
+  display: block;
+  margin-top: 5px;
+
+}
+.addProduct__inputFile::-webkit-file-upload-button {
+  padding: 10px;
+  visibility: hidden;
+}
+.addProduct__inputFile::before {
+  content: "Upload File";
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: 1px solid salmon;
+}
+.addProduct__btn {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
