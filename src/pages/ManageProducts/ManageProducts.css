@@ -1,0 +1,16 @@
+.manageProducts {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+}
+.manageProducts__headingTitle {
+  background-color: var(--light-color);
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  padding: 15px 30px;
+  border-radius: 10px;
+}
+.manageProducts__list {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,25 @@
+.manageProductItem {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  padding: 10px 25px;
+}
+.btnEdit {
+  background-color: #3BC83B;
+  margin-right: 5px;
+}
+.btnDelete {
+  background-color: #FF444A;
+}
+.btnEdit,
+.btnDelete
+{
+  border: none;
+  padding: 5px 7px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.btnEdit:focus,
+.btnDelete:focus {
+  outline: none;
+}
