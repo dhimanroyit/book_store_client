@@ -2,9 +2,10 @@ import React from 'react';
 import {Link, useRouteMatch, Route} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPlus, faEdit, faThLarge} from '@fortawesome/free-solid-svg-icons';
-import './Admin.css';
-import AddBook from '../AddBook/AddBook';
+import AddProduct from '../AddProduct/AddProduct';
 import ManageBooks from '../ManageBooks/ManageBooks';
+import './Admin.css';
+
 
 function Admin() {
   const {url, path} = useRouteMatch();
@@ -16,7 +17,7 @@ function Admin() {
         <h2 className="sidebar__logo">BookStore</h2>
         <div className="sidebar__nav">
           <Link to={`${url}/managebooks`} className="sidebar__navItem"> <FontAwesomeIcon className="sidebar__navIcon" icon={faThLarge} />Manage Books</Link>
-          <Link to={`${url}/addbook`} className="sidebar__navItem"><FontAwesomeIcon className="sidebar__navIcon" icon={faPlus} />Add Book</Link>
+          <Link to={`${url}/addProduct`} className="sidebar__navItem"><FontAwesomeIcon className="sidebar__navIcon" icon={faPlus} />Add Book</Link>
           <Link to={`${url}/editbook`} className="sidebar__navItem"><FontAwesomeIcon className="sidebar__navIcon" icon={faEdit} />Edit Book</Link>
         </div>
       </div>
@@ -28,8 +29,8 @@ function Admin() {
           <Route path={`${path}/managebooks`}>
             <ManageBooks />
           </Route>
-          <Route path={`${path}/addbook`} >
-            <AddBook />            
+          <Route path={`${path}/addProduct`} >
+            <AddProduct />           
           </Route>
           <Route path={`${path}/editbook`} >
           <h1>edit book</h1>
