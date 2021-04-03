@@ -4,7 +4,7 @@ import axios from 'axios';
 import Button from '../../components/Button/Button';
 import './AddProduct.css';
 
-function AddBook() {
+function AddProduct() {
   const [imageURL, setImageURL] = useState(null);
   const {register, handleSubmit} = useForm();
 
@@ -57,4 +57,4 @@ function AddBook() {
   )
 }
 
-export default AddBook
+export default AddProduct;
