@@ -13,7 +13,7 @@ function Admin() {
   return (
     <div className="admin">
       <div className="sidebar">
-        <h2 className="sidebar__logo">BookStore</h2>
+        <Link to="/"><h2 className="sidebar__logo">BookStore</h2></Link>
         <div className="sidebar__nav">
           <Link 
             to={`${url}/manageproducts`} 

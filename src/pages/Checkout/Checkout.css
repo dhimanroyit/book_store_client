@@ -19,6 +19,7 @@
 .checkout__productTitle,
 .checkout__productItem {
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: 3fr 1fr 1fr;
   border-bottom: 1px solid var(--light-color);
 }
@@ -27,6 +28,7 @@
 }
 .checkout__total {
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: 4fr 1fr;
 }
 .checkout__btn {

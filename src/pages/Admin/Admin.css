@@ -43,3 +43,22 @@
   background-color: var(--admin-bg);
   min-height: calc(100vh - 60px);
 }
+@media (max-width: 767px) {
+  .sidebar {
+    width: 150px;
+  }
+  .admin__page {
+    margin-left: 150px;
+  }
+  .sidebar__logo {
+    margin-left: 0;
+  }
+  .sidebar__navItem {
+    padding: 10px 8px;
+    margin-left: 0;
+    color: var(--btn-txt-color);
+  }
+  .admin__pageContent {
+    padding: 10px;
+  }
+}

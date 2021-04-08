@@ -46,3 +46,11 @@
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 767px) {
+  .addProduct__inputGroup {
+    grid-template-columns: 1fr
+  }
+  .addProduct__label {
+    margin-top: 15px;
+  }
+}

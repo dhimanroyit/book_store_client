@@ -14,3 +14,12 @@
   margin-top: 10px;
   margin-bottom: 40px;
 }
+
+@media (max-width: 767px) {
+  .manageProducts {
+    padding: 12px;
+  }
+  .manageProducts__headingTitle {
+    padding: 10px;
+  }
+}

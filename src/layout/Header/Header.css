@@ -20,3 +20,26 @@
   color: var(--btn-txt-color);
 }
 
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .logo {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .nav__item {
+    padding: 10px 10px;
+  }
+  .nav__item:not(:last-child) {
+    margin-right: 0px;
+  }
+}
+

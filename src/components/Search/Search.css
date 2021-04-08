@@ -33,3 +33,9 @@ width: 100%;
   border: none;
   outline: none;
 }
+
+@media (max-width: 767px) {
+  .search {
+    width: 70%;
+  }
+}
